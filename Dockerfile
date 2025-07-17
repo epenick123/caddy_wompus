@@ -1,9 +1,5 @@
-# This is a comment
-
-# Use a lightweight debian os
-# as the base image
 FROM debian:stable-slim
-
-# execute the 'echo "hello world"'
-# command when the container runs
-CMD ["echo", "hello world"]
+ENV PORT=8991
+# COPY source destination
+COPY caddy_wompus /bin/caddy_wompus
+CMD ["/bin/caddy_wompus"]
